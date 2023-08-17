@@ -19,12 +19,6 @@ const Menu = dynamic(() => import("./components/Menu"), {
 export default function Home() {
 	return (
 		<>
-			<link
-				rel="stylesheet"
-				href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-				integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-				crossOrigin=""
-			/>
 			<main className="h-screen w-screen flex justify-center">
 				<div className="grid [grid-template-rows:40%_1fr] h-full w-full">
 					<div className="[background-image:url('/pattern-bg-mobile.png')] lg:[background-image:url('/pattern-bg-desktop.png')] w-full h-full bg-no-repeat bg-cover z-40 shadow-2xl"></div>
