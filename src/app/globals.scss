@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+	@apply text-[0.6rem] uppercase text-gray-dark tracking-widest font-medium;
+}
+h3 {
+	@apply text-gray-very_dark font-bold text-xl tracking-tighter;
+}

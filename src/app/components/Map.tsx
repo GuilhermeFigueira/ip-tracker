@@ -1,7 +1,6 @@
 "use client";
-import { LatLng } from "leaflet";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import L from "leaflet";
 export default function Map() {
 	return (
 		<MapContainer
@@ -10,16 +9,16 @@ export default function Map() {
 			zoom={13}
 			className="h-full w-full"
 			scrollWheelZoom
+			zoomControl={false}
 		>
 			<TileLayer
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 			/>
 			<Marker
+				icon={L.icon({ iconUrl: "/icon-location.svg" })}
 				position={[51.505, -0.09]} // position={[ip.lat, ip.lng]}
-			>
-				<Popup>You are here</Popup>
-			</Marker>
+			></Marker>
 		</MapContainer>
 	);
 }
