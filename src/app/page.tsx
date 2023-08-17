@@ -21,7 +21,7 @@ export default function Home() {
 		<>
 			<main className="h-screen w-screen flex justify-center">
 				<div className="grid [grid-template-rows:40%_1fr] h-full w-full">
-					<div className="[background-image:url('/pattern-bg-mobile.png')] lg:[background-image:url('/pattern-bg-desktop.png')] w-full h-full bg-no-repeat bg-cover z-40 shadow-2xl"></div>
+					<div className="[background-image:url('/pattern-bg-mobile.webp')] lg:[background-image:url('/pattern-bg-desktop.webp')] w-full h-full bg-no-repeat bg-cover z-40 shadow-2xl"></div>
 					<div className="z-30 flex justify-center items-center">
 						<Map />
 					</div>
