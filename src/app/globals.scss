@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 h2 {
-	@apply text-[0.6rem] uppercase text-gray-dark tracking-widest font-medium;
+	@apply text-[0.6rem] lg:text-xs uppercase text-gray-dark tracking-widest font-medium mb-2;
 }
 h3 {
-	@apply text-gray-very_dark font-bold text-xl tracking-tighter;
+	@apply text-gray-very_dark font-bold text-xl tracking-tighter lg:text-2xl;
 }

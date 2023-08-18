@@ -1,7 +1,23 @@
 "use client";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, useMap } from "react-leaflet";
 import L from "leaflet";
+import { useCoordinateStates } from "../states/coordinate-states";
+import { useEffect } from "react";
+
+interface coordinateType {
+	lat: number;
+	lng: number;
+}
+
 export default function Map() {
+	const { lat, lng } = useCoordinateStates();
+	const RecenterAutomatically = ({ lat, lng }: coordinateType) => {
+		const map = useMap();
+		useEffect(() => {
+			map.setView([lat, lng]);
+		}, [lat, lng, map]);
+		return null;
+	};
 	return (
 		<>
 			<link
@@ -11,9 +27,8 @@ export default function Map() {
 				crossOrigin=""
 			/>
 			<MapContainer
-				// center={[ip.lat, ip.lng]}
-				center={[51.505, -0.09]}
-				zoom={13}
+				center={[lat, lng]}
+				zoom={15}
 				className="h-full w-full"
 				scrollWheelZoom
 				zoomControl={false}
@@ -24,8 +39,9 @@ export default function Map() {
 				/>
 				<Marker
 					icon={L.icon({ iconUrl: "/icon-location.svg" })}
-					position={[51.505, -0.09]} // position={[ip.lat, ip.lng]}
+					position={[lat, lng]}
 				></Marker>
+				<RecenterAutomatically lat={lat} lng={lng} />
 			</MapContainer>
 		</>
 	);
