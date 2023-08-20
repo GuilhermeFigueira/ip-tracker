@@ -65,13 +65,13 @@ function MenuContent() {
 				</button>
 			</div>
 			<div className="bg-white rounded-2xl flex flex-col lg:flex-row lg:px-4 lg:py-8 lg:w-fit  gap-6 w-80 text-center py-4 shadow-2xl lg:text-left">
-				<div className=" lg:p-4">
+				<div className=" lg:p-4 items-center flex">
 					<h2>Ip Address </h2>
 					<h3>
 						{isLoading ? <Loader2 className="animate-spin" /> : ip}
 					</h3>
 				</div>
-				<div className="lg:border-l-2 lg:p-4 items-center">
+				<div className="lg:border-l-2 lg:p-4 items-center flex">
 					<h2>Location</h2>
 					<h3>
 						{isLoading ? (
@@ -81,7 +81,7 @@ function MenuContent() {
 						)}
 					</h3>
 				</div>
-				<div className="lg:border-l-2 lg:p-4 items-center">
+				<div className="lg:border-l-2 lg:p-4 items-center flex">
 					<h2>Timezone</h2>
 					<h3>
 						{isLoading ? (
@@ -91,7 +91,7 @@ function MenuContent() {
 						)}
 					</h3>
 				</div>
-				<div className="lg:border-l-2 lg:p-4 items-center">
+				<div className="lg:border-l-2 lg:p-4 items-center flex">
 					<h2>Isp</h2>
 					<h3>
 						{isLoading ? <Loader2 className="animate-spin" /> : isp}
