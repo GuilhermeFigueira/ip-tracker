@@ -71,7 +71,7 @@ function MenuContent() {
 						{isLoading ? <Loader2 className="animate-spin" /> : ip}
 					</h3>
 				</div>
-				<div className="lg:border-l-2 lg:p-4">
+				<div className="lg:border-l-2 lg:p-4 items-center">
 					<h2>Location</h2>
 					<h3>
 						{isLoading ? (
@@ -81,7 +81,7 @@ function MenuContent() {
 						)}
 					</h3>
 				</div>
-				<div className="lg:border-l-2 lg:p-4">
+				<div className="lg:border-l-2 lg:p-4 items-center">
 					<h2>Timezone</h2>
 					<h3>
 						{isLoading ? (
@@ -91,7 +91,7 @@ function MenuContent() {
 						)}
 					</h3>
 				</div>
-				<div className="lg:border-l-2 lg:p-4">
+				<div className="lg:border-l-2 lg:p-4 items-center">
 					<h2>Isp</h2>
 					<h3>
 						{isLoading ? <Loader2 className="animate-spin" /> : isp}
